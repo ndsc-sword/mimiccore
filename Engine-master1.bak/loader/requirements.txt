@@ -1,0 +1,5 @@
+requests
+pyzmq
+pyyaml
+pybars3
+psutil

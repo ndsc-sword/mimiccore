@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompositionSpecification xmlns="http://netide.eu/schemas/compositionspecification/v1">
+  <Modules>
+    <Module id="SimpleSwitch" loaderIdentification="simple.py" deadTimeOut="10"/>
+    <Module id="learningswitch" loaderIdentification="learningswitch.java" deadTimeOut="10"/>
+    <Module id="org.onosproject.fwd" loaderIdentification="learningswitch.java" deadTimeOut="10"/>
+  </Modules>
+  <Composition>
+    <ParallelCall resolutionPolicy="priority">
+      <ModuleCall module="SimpleSwitch" priority="1" />
+      <ModuleCall module="learningswitch" priority="2" />
+      <ModuleCall module="org.onosproject.fwd" priority="3" />
+    </ParallelCall>
+  </Composition>
+</CompositionSpecification>
